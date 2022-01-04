@@ -1,19 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const _ = require('lodash')
-const appInsights = require('applicationinsights')
-
-appInsights
-    .setAutoDependencyCorrelation(true)
-    .setAutoCollectRequests(true)
-    .setAutoCollectPerformance(true, true)
-    .setAutoCollectExceptions(true)
-    .setAutoCollectDependencies(true)
-    .setAutoCollectConsole(true)
-    .setUseDiskRetryCaching(true)
-    .setSendLiveMetrics(false)
-    .setDistributedTracingMode(appInsights.DistributedTracingModes.AI)
-    .start()
 
 const app = express()
 app.use(bodyParser.json())
