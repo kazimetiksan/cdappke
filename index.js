@@ -21,7 +21,7 @@ app.use(bodyParser.json())
 app.get('/api/hello', async (req, res) => {
 
     const somekey = process.env.APPSETTING_somekey
-    res.send('somekey='+somekey)
+    res.send('hello world')
 })
 
 app.get('/api/merhaba', (req, res) => {
